@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="Icon" title="" href="Natasha1.jpg.png">
+<title>💖 For Natasha 💖</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:system-ui,Arial,sans-serif}
+:root{--rose:#f43f5e;--gold:#fbbf24;--soft:#ffe4e6}
+html,body{min-height:100%}
+html{scroll-behavior:smooth}
+body{color:var(--soft);overflow-x:hidden;
+  background:linear-gradient(-45deg,#1e0a1e,#4a1136,#1e0a1e,#3b0d2e);background-size:400% 400%;animation:grad 14s ease infinite}
+@keyframes grad{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
+
+/* ═══ 10-SECOND COUNTDOWN ═══ */
+#countdown{position:fixed;inset:0;z-index:100;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  background:radial-gradient(circle at 50% 40%,#4a1136,#1e0a1e 70%);text-align:center;cursor:pointer}
+#countdown .for{font-size:clamp(1.1rem,4vw,1.6rem);letter-spacing:6px;color:#fda4af;text-transform:uppercase}
+#countdown .who{font-size:clamp(2.6rem,10vw,4.6rem);font-weight:900;margin:6px 0 2px;
+  background:linear-gradient(90deg,#fda4af,#f43f5e,#fbbf24,#fda4af);background-size:250%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 5s linear infinite}
+#countdown .date{color:#fda4af;letter-spacing:3px;margin-bottom:4vh}
+#num{font-size:clamp(7rem,30vw,14rem);font-weight:900;line-height:1;color:#fff;
+  text-shadow:0 0 40px rgba(244,63,94,.8),0 0 90px rgba(251,191,36,.4);animation:beat 1s ease infinite}
+@keyframes beat{0%{transform:scale(1)}25%{transform:scale(1.12)}45%{transform:scale(1)}60%{transform:scale(1.07)}}
+#countdown .hint{margin-top:4vh;color:#9f6b7a;font-size:.85rem;letter-spacing:2px}
+
+/* ═══ SURPRISE LAYOUT ═══ */
+.hidden{display:none!important}
+.wrap{max-width:860px;margin:0 auto;padding:56px 20px;position:relative;z-index:2;text-align:center}
+.heart{position:fixed;bottom:-50px;font-size:20px;opacity:.2;pointer-events:none;animation:rise linear infinite;z-index:1}
+@keyframes rise{to{transform:translateY(-115vh) rotate(26deg)}}
+.crown{font-size:clamp(2.6rem,9vw,4rem);filter:drop-shadow(0 0 24px rgba(251,191,36,.8));display:block;animation:crownFloat 3s ease-in-out infinite}
+@keyframes crownFloat{0%,100%{transform:translateY(0) rotate(-4deg)}50%{transform:translateY(-10px) rotate(4deg)}}
+h1.big{font-size:clamp(2.2rem,8vw,4.2rem);font-weight:900;line-height:1.15;margin:10px 0 6px;
+  background:linear-gradient(90deg,#fda4af,#f43f5e,#fbbf24,#fda4af);background-size:250%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:grad 6s linear infinite}
+.hero-sub{color:#fda4af;font-size:1.05rem;letter-spacing:2px;margin-bottom:34px}
+.age-badge{display:inline-block;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.18);
+  border-radius:999px;padding:8px 20px;margin-bottom:30px;letter-spacing:3px;color:#fbbf24;font-weight:700;
+  animation:beat 2.4s ease infinite}
+
+/* ★ THE GOLDEN WISH ★ */
+.gold-box{margin:34px 0;padding:34px 16px;border-radius:24px;position:relative;
+  background:radial-gradient(circle at 50% 0%,rgba(251,191,36,.14),transparent 70%);
+  border:1px solid rgba(251,191,36,.25);box-shadow:0 0 60px rgba(251,191,36,.12) inset}
+.gold{font-weight:900;line-height:1.25;font-size:clamp(1.7rem,7.5vw,3.4rem);letter-spacing:2px}
+.gold span{display:inline-block;background:linear-gradient(90deg,#fde68a,#f59e0b,#fde68a);background-size:200%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+  animation:drop .7s cubic-bezier(.2,1.4,.4,1) backwards,shine 3s linear infinite,varpulse 2.6s ease-in-out infinite}
+@keyframes drop{from{opacity:0;transform:translateY(-46px) scale(.4) rotate(-8deg)}to{opacity:1;transform:none}}
+@keyframes shine{0%{background-position:0% 50%}100%{background-position:200% 50%}}
+@keyframes varpulse{0%,100%{filter:drop-shadow(0 0 6px rgba(251,191,36,.35))}50%{filter:drop-shadow(0 0 22px rgba(251,191,36,.75))}}
+.under-gold{margin-top:12px;color:#fda4af;font-size:.95rem;letter-spacing:2px}
+
+/* cards */
+.card{background:rgba(255,255,255,.07);backdrop-filter:blur(10px);border:1px solid rgba(255,255,255,.15);
+  border-radius:22px;padding:34px 28px;margin:26px 0;box-shadow:0 18px 50px rgba(0,0,0,.3);text-align:left}
+.letter{font-family:Georgia,'Times New Roman',serif;font-size:1.1rem;line-height:1.95;white-space:pre-line}
+.letter::before{content:'💌';font-size:2rem;display:block;margin-bottom:14px}
+h2{font-size:1.4rem;margin-bottom:20px;text-align:center;color:#fff}
+h2::after{content:'';display:block;width:64px;height:3px;margin:10px auto 0;border-radius:3px;
+  background:linear-gradient(90deg,transparent,var(--rose),transparent)}
+
+/* ═══ OUR ANTHEM — spinning vinyl (audio) ═══ */
+.anthem{text-align:center}
+.disczone{position:relative;display:flex;align-items:center;justify-content:center;
+  width:200px;height:200px;margin:0 auto;border-radius:50%;cursor:pointer;
+  background:radial-gradient(circle,rgba(244,63,94,.25),transparent 70%);
+  border:2px solid rgba(251,191,36,.35);transition:border-color .3s}
+.disczone:hover{border-color:var(--rose)}
+.vinyl{font-size:7.5rem;display:block;filter:drop-shadow(0 0 26px rgba(244,63,94,.6));
+  animation:spin 3.5s linear infinite;animation-play-state:paused}
+.disczone.playing .vinyl{animation-play-state:running}
+.disczone.playing{border-color:var(--gold);box-shadow:0 0 44px rgba(251,191,36,.3)}
+.soundchip{position:absolute;top:8px;right:8px;background:rgba(15,10,20,.85);border:1px solid rgba(251,191,36,.5);
+  color:#fde68a;font-size:.72rem;font-weight:700;padding:6px 12px;border-radius:999px;
+  animation:chipPulse 1.4s ease-in-out infinite;cursor:pointer}
+@keyframes chipPulse{0%,100%{transform:scale(1)}50%{transform:scale(1.08)}}
+.nowplay{display:flex;align-items:center;justify-content:center;gap:12px;margin:16px auto 4px;color:#fde68a;
+  font-weight:800;letter-spacing:1px;font-size:.95rem}
+.eq{display:flex;gap:3px;align-items:flex-end;height:18px}
+.eq i{width:4px;background:linear-gradient(#fbbf24,#f43f5e);border-radius:2px;animation:eq 1s ease-in-out infinite}
+.eq i:nth-child(2){animation-delay:.15s}.eq i:nth-child(3){animation-delay:.3s}
+.eq i:nth-child(4){animation-delay:.45s}.eq i:nth-child(5){animation-delay:.6s}
+@keyframes eq{0%,100%{height:5px}50%{height:18px}}
+.anthem .credit{color:#9f6b7a;font-size:.8rem;margin-top:6px}
+
+/* floating disc button */
+.fab{position:fixed;bottom:20px;right:20px;z-index:60;width:56px;height:56px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;font-size:1.5rem;cursor:pointer;
+  background:linear-gradient(135deg,#f43f5e,#be123c);border:2px solid rgba(251,191,36,.5);
+  box-shadow:0 10px 30px rgba(244,63,94,.5);transition:transform .2s}
+.fab:hover{transform:scale(1.08)}
+.fab .disc{display:block;animation:spin 3.5s linear infinite;animation-play-state:paused}
+.fab.playing .disc{animation-play-state:running}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* ═══ GALLERY — her photos ═══ */
+.gal{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:18px}
+.ph{position:relative;border-radius:18px;overflow:hidden;border:2px solid rgba(251,191,36,.35);
+  animation:floaty 5s ease-in-out infinite;cursor:pointer;
+  box-shadow:0 14px 34px rgba(0,0,0,.4);transition:transform .45s,box-shadow .45s,border-color .45s}
+.ph:nth-child(2){animation-delay:.7s}.ph:nth-child(3){animation-delay:1.4s}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+.ph:hover{transform:translateY(-10px) rotate(-2deg) scale(1.05);border-color:var(--rose);
+  box-shadow:0 26px 60px rgba(244,63,94,.5);animation-play-state:paused;z-index:3}
+.ph img{width:100%;height:280px;object-fit:cover;display:block;transition:transform .6s}
+.ph:hover img{transform:scale(1.1)}
+.ph::after{content:'';position:absolute;top:0;left:-80%;width:55%;height:100%;pointer-events:none;
+  background:linear-gradient(105deg,transparent,rgba(255,255,255,.35),transparent);transform:skewX(-18deg);
+  transition:left .7s}
+.ph:hover::after{left:130%}
+.ph .cap{position:absolute;left:0;right:0;bottom:0;padding:26px 14px 12px;font-size:.9rem;font-weight:600;
+  background:linear-gradient(transparent,rgba(0,0,0,.8));transform:translateY(100%);transition:transform .4s}
+.ph:hover .cap{transform:translateY(0)}
+.ph .num{position:absolute;top:10px;left:12px;font-size:.75rem;font-weight:800;letter-spacing:2px;color:#fff;
+  background:rgba(244,63,94,.85);padding:4px 10px;border-radius:999px;box-shadow:0 4px 14px rgba(244,63,94,.5)}
+.ph.missing::before{content:'💖';position:absolute;inset:0;display:flex;align-items:center;justify-content:center;
+  font-size:4rem;background:linear-gradient(135deg,#be123c,#4a1136)}
+
+/* flip cards */
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px}
+.flip{perspective:900px;cursor:pointer;height:190px}
+.inner{position:relative;width:100%;height:100%;transition:transform .6s;transform-style:preserve-3d}
+.flip.flipped .inner{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;border-radius:16px;display:flex;align-items:center;justify-content:center;
+  padding:18px;backface-visibility:hidden;font-size:.95rem;line-height:1.55}
+.front{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.2);font-size:2rem}
+.back{background:linear-gradient(135deg,#f43f5e,#be123c);transform:rotateY(180deg);font-weight:600;
+  box-shadow:0 10px 26px rgba(244,63,94,.35)}
+
+.closing{font-size:1.25rem;font-weight:800;line-height:1.7}
+.closing .forever{display:block;margin-top:10px;font-family:Georgia,serif;font-style:italic;font-weight:600;
+  font-size:1.5rem;background:linear-gradient(90deg,#fda4af,#fbbf24,#fda4af);background-size:200%;
+  -webkit-background-clip:text;background-clip:text;color:transparent;animation:shine 4s linear infinite}
+.replay{margin-top:26px;color:#9f6b7a;font-size:.8rem;cursor:pointer;text-decoration:underline}
+footer{padding:26px;text-align:center;color:#9f6b7a;font-size:.8rem}
+canvas{position:fixed;inset:0;pointer-events:none;z-index:50}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}#num{animation:none}}
+</style>
+</head>
+<body>
+<canvas id="cv" class="hidden"></canvas>
+
+<!-- ⏳ 10-second countdown overlay -->
+<div id="countdown">
+  <div class="for">Something special for</div>
+  <div class="who">NATASHA</div>
+  <div class="date">👑 22 · SEPTEMBER 21, 2026 👑</div>
+  <div id="num">10</div>
+  <div class="hint">tap to skip ♡</div>
+</div>
+
+<!-- 🎁 THE SURPRISE -->
+<div class="wrap" id="surprise" style="display:none">
+
+  <span class="crown">👑</span>
+  <h1 class="big">Happy 22nd Birthday,<br>Natasha!</h1>
+  <p class="hero-sub">SEPTEMBER 21, 2026 · A DAY AS BEAUTIFUL AS YOU</p>
+  <div class="age-badge">✨ LEVEL 22 UNLOCKED ✨</div>
+
+  <!-- THE GOLDEN WISH -->
+  <div class="gold-box">
+    <div class="gold" id="goldenWish"></div>
+    <div class="under-gold">— from the luckiest man alive 💘</div>
+  </div>
+
+  <!-- 🎵 OUR ANTHEM — audio only, spins while it plays -->
+  <div class="card anthem">
+    <h2>Our Anthem 💞</h2>
+    <div class="disczone" id="dz" onclick="toggleSong(event)">
+      <span class="vinyl">💿</span>
+      <span class="soundchip hidden" id="soundChip" onclick="unlockSound(event)">🔊 Tap for sound</span>
+    </div>
+    <div class="nowplay">
+      <span class="eq"><i></i><i></i><i></i><i></i><i></i></span>
+      IN THE NAME OF LOVE
+      <span class="eq"><i></i><i></i><i></i><i></i><i></i></span>
+    </div>
+    <div class="credit">Martin Garrix & Bebe Rexha · every word is how I feel about you</div>
+    <audio id="song" src="Martin_Garrix___Bebe_Rexha_-_In_The_Name_Of_Love__Lyrics_(360p) - Copy.mp4" loop preload="auto"></audio>
+  </div>
+
+  <!-- His words -->
+  <div class="card">
+    <div class="letter">Natasha,
+
+You are one of the best things that have ever happened to me. Knowing a girl like you changed my perspective, my view, my way of thinking — you literally changed me, and you changed me for the better.
+
+So today, the whole world stops for you. Today is YOUR day.
+
+And I need you to know this, forever: I love you, Natasha, with all my heart and all my soul. 💖</div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════════
+       👸 HER PHOTOS — the ONLY section you'll ever edit.
+       Keep these filenames: natasha1.jpg, natasha2.jpg, natasha3.jpg
+       (or change src="" below to whatever you name them).
+       Captions: edit the text inside <span class="cap">.
+       ═══════════════════════════════════════════════════════ -->
+  <div class="card" style="text-align:center">
+    <h2>The Queen Herself 👸</h2>
+    <p style="color:#fda4af;font-size:.9rem;margin-bottom:18px">hover over them… they like the attention 😌</p>
+    <div class="gal">
+      <figure class="ph">
+        <img src="Natasha.jpg.png" alt="Natasha playful selfie" onerror="this.parentElement.classList.add('missing');this.remove()">
+        <span class="num">N°1</span>
+        <span class="cap">That playful look that ruins my whole concentration 😝💕</span>
+      </figure>
+      <figure class="ph">
+        <img src="Natasha1.jpg.png" alt="Natasha mirror selfie" onerror="this.parentElement.classList.add('missing');this.remove()">
+        <span class="num">N°2</span>
+        <span class="cap">Baddie energy — my whole heart in a denim jacket 💅🔥</span>
+      </figure>
+      <figure class="ph">
+        <img src="Natasha2.jpg.png" alt="Natasha collage" onerror="this.parentElement.classList.add('missing');this.remove()">
+        <span class="num">N°3</span>
+        <span class="cap">Every version of you is my favorite version 🥰✨</span>
+      </figure>
+    </div>
+  </div>
+
+  <!-- Reasons -->
+  <div class="card" style="text-align:center">
+    <h2>Tap each heart, my love 💞</h2>
+    <div class="grid">
+      <div class="flip" onclick="this.classList.toggle('flipped')"><div class="inner">
+        <div class="face front">💖</div>
+        <div class="face back">Natasha, you are one of the best things that have ever happened to me.</div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('flipped')"><div class="inner">
+        <div class="face front">💘</div>
+        <div class="face back">Knowing a girl like you changed my perspective, my view, my way of thinking — you literally changed me.</div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('flipped')"><div class="inner">
+        <div class="face front">😍</div>
+        <div class="face back">That's why this very day, I celebrate you — today and every day after.</div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('flipped')"><div class="inner">
+        <div class="face front">🫢</div>
+        <div class="face back">I love you, Natasha, with all my heart and all my soul.</div>
+      </div></div>
+      <div class="flip" onclick="this.classList.toggle('flipped')"><div class="inner">
+      <div class="face front">😘</div>
+        <div class="face back">Will u marry me Natasha😁. Cuz I'm Crazy and Insane about U, Your my Angel😇</div>
+    </div></div>
+    </div>
+  </div>
+
+  <!-- Closing -->
+  <div class="card" style="text-align:center">
+    <p class="closing">Happy Birthday, my love.
+      <span class="forever">I love you Natasha, today, tomorrow, always. ❤️</span>
+    </p>
+    <p style="color:#fda4af;margin-top:14px">— Akeh David, your man</p>
+    <div class="replay" onclick="location.reload()">♥ watch it again</div>
+  </div>
+</div>
+
+<!-- floating music button -->
+<div class="fab" id="fab" onclick="toggleSong()" title="Play / pause our song"><span class="disc">💿</span></div>
+
+<footer>Made with ❤️ by the man who loves you most</footer>
+
+<script>
+/* ── THE GOLDEN WISH ── */
+(function(){
+  const text='HAPPY BIRTHDAY TO U NATASHA';
+  const box=document.getElementById('goldenWish');
+  box.innerHTML=[...text].map((ch,i)=>
+    ch===' ' ? '<span style="width:.4em"></span>'
+             : `<span style="animation-delay:${i*0.09}s, ${i*0.09}s, ${i*0.09}s">${ch}</span>`
+  ).join('');
+})();
+
+/* ── 10 → 0 countdown ── */
+const cd=document.getElementById('countdown'), numEl=document.getElementById('num');
+let n=10, done=false;
+function reveal(){
+  if(done)return; done=true;
+  cd.style.transition='opacity .7s'; cd.style.opacity='0';
+  setTimeout(()=>{cd.remove(); startSurprise();},700);
+}
+const iv=setInterval(()=>{
+  n--;
+  if(n<=0){ clearInterval(iv); numEl.textContent='💗'; reveal(); }
+  else{ numEl.textContent=n; numEl.style.animation='none'; void numEl.offsetWidth; numEl.style.animation=''; }
+},1000);
+cd.addEventListener('click',()=>{clearInterval(iv);reveal();});
+
+/* ── floating hearts ── */
+(function(){
+  for(let i=0;i<12;i++){
+    const h=document.createElement('div');h.className='heart';
+    h.textContent=['💖','💗','💘','🩷'][i%4];
+    h.style.left=Math.random()*100+'vw';
+    h.style.animationDuration=7+Math.random()*8+'s';
+    h.style.animationDelay=-Math.random()*10+'s';
+    document.body.appendChild(h);
+  }
+})();
+
+/* ── THE SONG (audio): starts exactly with the confetti ── */
+const song=document.getElementById('song'), fab=document.getElementById('fab'),
+      chip=document.getElementById('soundChip'), dz=document.getElementById('dz');
+song.volume=.95;
+function startSong(){
+  song.play().then(()=>{ fab.classList.add('playing'); dz.classList.add('playing'); })
+  .catch(()=>{
+    song.muted=true;
+    song.play().then(()=>{ fab.classList.add('playing'); dz.classList.add('playing'); chip.classList.remove('hidden'); })
+    .catch(()=>{ chip.classList.remove('hidden'); });
+  });
+}
+/* one tap anywhere = sound on */
+document.addEventListener('click',function once(){
+  if(song.muted){ song.muted=false; chip.classList.add('hidden'); }
+  document.removeEventListener('click',once);
+});
+function toggleSong(e){ if(e)e.stopPropagation();
+  if(song.paused){ song.play(); fab.classList.add('playing'); dz.classList.add('playing'); }
+  else{ song.pause(); fab.classList.remove('playing'); dz.classList.remove('playing'); } }
+function unlockSound(e){ e.stopPropagation(); song.muted=false; chip.classList.add('hidden'); }
+
+/* ── surprise start ── */
+function startSurprise(){
+  const s=document.getElementById('surprise'); s.style.display='block';
+  window.scrollTo({top:0});
+  confetti();
+  startSong();
+}
+
+/* ── emoji confetti ── */
+function confetti(){
+  if(matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  const c=document.getElementById('cv');c.classList.remove('hidden');
+  c.width=innerWidth;c.height=innerHeight;
+  const ctx=c.getContext('2d'),em=['🎉','💖','✨','🎂','🥰','🎈','👑'];
+  const P=Array.from({length:80},()=>({x:Math.random()*c.width,y:-20-Math.random()*innerHeight*.6,
+    s:14+Math.random()*22,v:1.5+Math.random()*3,e:em[Math.random()*em.length|0],
+    rot:Math.random()*6.3,sw:.5+Math.random()*2}));
+  (function frame(){
+    ctx.clearRect(0,0,c.width,c.height);
+    for(const p of P){
+      p.y+=p.v;p.x+=Math.sin(p.y/30)*p.sw;p.rot+=.02;
+      if(p.y>innerHeight+40){p.y=-30;p.x=Math.random()*c.width}
+      ctx.save();ctx.translate(p.x,p.y);ctx.rotate(p.rot);
+      ctx.font=p.s+'px serif';ctx.fillText(p.e,0,0);ctx.restore();
+    }
+    requestAnimationFrame(frame);
+  })();
+}
+</script>
+</body>
+</html>
